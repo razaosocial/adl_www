@@ -1,0 +1,347 @@
+﻿body
+{
+    padding: 0px;
+    margin: 0px;
+    background-color: #959595;
+    text-decoration: none;
+    color: #666666;
+    font-family: Calibri;
+    font-size: 10pt;
+}
+/*titulos das paginhas*/
+h1
+{
+    background-image: url('../img/traco_tituloInternas.gif');
+    background-repeat: no-repeat;
+    background-position: 220px bottom;
+    font-size: 24px;
+    text-align: left;
+}
+/*Subtitulos de texto*/
+h2
+{
+    font-weight: bold;
+    font-size: 10pt;
+    text-align: left;
+    color: #333333;
+}
+/*Paragrafos para textos*/
+p
+{
+    text-align: justify;
+    color: #333333;
+}
+/*modificando link para os texto*/
+a
+{
+    text-decoration: underline;
+  /*  color: #000000;*/
+	color:#333;
+}
+a:hover
+{
+    font-weight: bolder;
+}
+/*tirando borda de imagem quando tem link*/
+a img
+{
+    border-width: 0px;
+    border-style: none;
+    text-decoration: none;
+}
+/*configurando lista para texto de conteudos*/
+ul
+{
+    text-align: left;
+    color: #333333;
+    list-style-type: square;
+}
+/*pagina geral */
+#pagina
+{
+    width: 1250px;
+    background-image: url('../img/fundo.jpg');
+    background-repeat: repeat-y;
+    margin: 0 auto;
+    text-align: center;
+}
+/* corpo que está atrás das páginas*/
+#corpo
+{
+    width: 840px;
+    margin-left: 205px;
+    background-image: url('../img/fundo_conteudo.gif');
+    background-repeat: repeat-y;
+    background-position: center;
+}
+/*corpo de todo o conteudo interno das páginas*/
+#corpo-interno
+{
+    background-position: center top;
+    height: 0 auto;
+    background-image: url('../img/topo.gif');
+    background-repeat: no-repeat;
+    overflow: hidden;   
+	padding-top: 170px; 
+}
+/*configuracao de todo conteudo do centro da página*/
+#conteudo-meio
+{
+    width: 390px;
+    margin-top: 34px;
+    float: right;
+}
+/*configuracao das Lebel hora e data*/
+/*#data
+{
+    margin-top: 150px;
+    margin-left: 500px;
+    width: 300px;
+    height: 15px;
+    color: #333333;
+}*/
+/*bloco esquerdo onde fica o menu e realizacao */
+#menu_esq
+{
+    width: 190px;
+    height: 720px;
+    margin-left: 30px;
+    margin-top: 30px;
+    float: left;
+}
+/*configracao da lista para o menu de opcoes*/
+#menu_esq ul
+{
+    width: 140px;
+    margin-left: 5px;
+    padding: 0px;
+    margin-top: 3px;
+}
+/*configurando items da lista*/
+#menu_esq ul li
+{
+    background-position: left bottom;
+    width: 140px;
+    text-align: left;
+    margin-left: 20px;
+    list-style-image: url('../img/bullets.gif');
+    padding-top: 3px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    background-image: url('../img/traco_menu.gif');
+    background-repeat: repeat-x;
+    vertical-align: text-top;
+    font-weight: 100;
+}
+/*configuracao de link do menu*/
+#menu_esq ul li a
+{
+    text-decoration: none;
+    color: #333333;
+    font-family: Calibri;
+    font-weight: 100;
+}
+/*configuracao de link do menu ao passar o mouse*/
+#menu_esq ul li a:hover
+{
+    font-family: Calibri;
+    font-weight: bold;
+    color: #000000;
+}
+/*menu bloco onde fica os destaques e parceiros do lado direito*/
+#menu_dir
+{
+    width: 190px;
+    margin-top: 30px;
+    margin-right: 30px;
+    float: right;
+}
+/*area para colocar os destaques e noticias do lado direito*/
+#destaque
+{
+    height: 380px;
+    overflow: hidden;
+    background-image: url('../img/destaque.gif');
+    background-repeat: no-repeat;
+    background-position: center top;    
+}
+/*bloco para colocar os logo do parceiro no lado direito*/
+#parceiros
+{
+    height: 260px;
+    overflow: hidden;
+    background-image: url('../img/new_fundo_box_promocao2.gif');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+/*bloco que vai texto e imagem de noticias da parte superior*/
+.cont_destaque_superior
+{
+    width: 185px;
+    margin-top: 65px;
+    overflow: hidden;
+}
+/*bloco que vai texto e imagem de noticias da parte inferior*/
+.cont_destaque_inferior
+{
+    width: 185px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+/*caixa de texto para o destaque inferior e superior */
+.txt_noticia
+{
+    float: right;
+    width: 105px;
+    font-family: Calibri;
+    font-size: 12px;
+    text-align: left;
+}
+
+#rodape
+{
+    background-position: center bottom;
+    width: 780px;
+    height: 20px;
+    margin: 0 auto;
+    background-image: url('../img/rodape.gif');
+    background-repeat: no-repeat;
+}
+#destaque_entrevista
+{
+    width: 565px;
+    height: 235px;
+    background-image: url('../img/destaque_entrevista_bia.png');
+    background-repeat: no-repeat;
+    background-position: 220px center;
+}
+/*Menu de selecao da biblioteca*/
+#biblioteca_menu
+{
+    width: 390px;
+}
+#biblioteca_menu ul
+{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    width: 390px;
+    float: left;
+}
+#biblioteca_menu ul li
+{
+    background-position: top;
+    background-image: url('../img/bg_ptC.gif');
+    background-repeat: repeat-x;
+    float: left;
+    width: 390px;
+    height: 25px;
+    padding-bottom: 10px;
+}
+#biblioteca_menu ul li a img
+{
+    padding-left: 25px;
+}
+#fale_conosco
+{
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+/*P onde fica o link do log para ir na home*/
+.p_home_href
+{
+    float: left;
+	width: 25%;
+    height: 25%;
+    margin-left: 70px;
+    position: absolute;
+}
+/*alinhamento dos conteudos das páginas*/
+.alinhamento_adn{
+	width: 750px;
+	margin: auto;
+	text-align: justify;
+}
+.alinhamento_leitura{
+	float:left;
+	text-align:justify;
+}
+.align_center{
+	width: 400px;
+	margin: auto;
+	text-align: justify;
+}
+/*todas as classes relacionadas ao fale-conosco*/
+.input{
+	width: 300px;
+	border-radius: 2px;
+    border: thin solid #C0C0C0;
+	height: 20px;
+	margin-top: 4px;
+	padding: 2px;
+}
+.select{
+	width: 170px;
+	border-radius: 2px;
+    border: thin solid #C0C0C0;
+	height: 25px;
+	margin-top: 4px;
+	float: left;
+	padding: 3px;
+}
+	
+.textareaemail{
+    margin-top: 4px;
+    height: 100px;
+    border-radius: 2px;
+    border: thin solid #CCCCCC;
+    width: 300px;
+}
+	
+.corpoemail{
+	width: 200px;
+	}
+        
+.msg_erro{
+	margin-top:5px;
+    padding: 5px;
+    border: thin solid /*#65a0db*/#FFF;
+    border-radius: 3px;
+    background-color: #FFCB5D/*#a6c3e0*/;
+    color: white;
+}
+#msg_enviada{
+	margin-left: 66px;
+	margin-top: 12px;
+	width: 220px;
+	height: 18px;
+	font-size: 12px;
+	text-align:center;
+    padding: 5px;
+	border: thin solid #999;	
+	border-radius: 3px;
+    color: #666;
+	font-weight: bold;
+}
+#msg_nao_enviada{
+	margin-top: 12px;
+	margin-left: 85px;
+	font-size: 12px;
+	width: 180px;
+	height: 18px;
+	text-align:center;
+    padding: 5px;
+    border: thin solid #EE0000;
+    border-radius: 3px;
+    color: #EE0000;
+	font-weight: bold;
+}
+.btn{
+	margin-right: 10px;
+	padding: 2px;
+	margin-top: 10px;
+	height: 25px;
+}
+
+
