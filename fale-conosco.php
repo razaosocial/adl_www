@@ -79,13 +79,6 @@
         if(isset($_SERVER['REQUEST_METHOD']) AND ($_SERVER['REQUEST_METHOD'] == 'POST')){
             
             extract($_POST);
-			
-//"fernanda.afonseca@hotmail.com";			
-//"suporte@institutorazaosocial.org.br";
-            //Definimos para quem será enviado o email
-            $para = "suporte@institutorazaosocial.org.br";
-			$testeassunto = "[Contato - Alem das Letras] - ";
-
              //Definimos o corpo da mensagem resgatando os inputs
             $corpoMensagem ="<body>
 								<div style='font-family:calibri;
@@ -109,23 +102,34 @@
 									</p>
 								</div>
 							</body>";
+			   //estanciando a classe phpMailer
+                require("./vendor/php_mailer/class.phpmailer.php");
+                $mail = new PHPMailer;
+                
+                //definindo dados do servidor smtp
+                $mail->IsSMTP(); //definindo que o enviou vai  ser smtp;
+                $mail->Host = "smtp.gmail.com";
+                $mail->Port = 587;
+				$mail->SMTPSecure = "TSL";
+                $mail->SMTPAuth = true;
+                $mail->Username = 'xxxxxxxx';
+                $mail->Password = 'xxxxxxx';
+                //dados do e-mail
+                $mail->Subject = "[Contato - Alem das Letras] - $assunto";
+                $mail->From = $emailremetente; 
+                $mail->FromName = $nome;
+                //$mail->AddAddress('suporte@institutorazaosocial.org.br');
+                $mail->AddAddress('suporte@institutorazaosocial.org.br');
+                $mail->IsHTML(true); // Define que o e-mail será enviado como HTML
+                $mail->Body =$corpoMensagem;
 
-
-            //5 � agora inserimos as codifica��es corretas e  tudo mais.
-            $headers =  "Content-Type:text/html; charset=UTF-8\n";
-            $headers .= "From:  ".$nome." <".$emailremetente.">\n"; //Vai ser //mostrado que  o email partiu deste email e seguido do nome
-            $headers .= "X-Sender:  <sistema@dominio.com.br>\n"; //email do servidor //que enviou
-            $headers .= "X-Mailer: PHP  v".phpversion()."\n";
-            $headers .= "X-IP:  ".$_SERVER['REMOTE_ADDR']."\n";
-            $headers .= "Return-Path:  <".$emailremetente.">\n"; //caso a msg //seja respondida vai para  este email.
-            $headers .= "MIME-Version: 1.0\n";
-
-            if(mail($para, "$testeassunto" .$assunto, $corpoMensagem, $headers)){
+                if ($mail->Send()) {
 				echo "<td><div id='msg_enviada'>Mensagem enviada com sucesso!<a href='javascript: fechar();'><img src='img/fechar_black.png' align='right'/></a></div></td>";
-		}
+				}
 		
 			else{
 				echo "<td><div id='msg_nao_enviada'>Mensagem não enviada!<a href='javascript: fechar_red();'><img src='img/fechar_red.png' align='right'/></a></div></td>";
+			
 				}//função que faz o envio do email.
 		}
 ?>
